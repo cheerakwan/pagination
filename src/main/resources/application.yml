@@ -1,0 +1,18 @@
+server:
+  port: 8050
+
+spring:
+  datasource:
+      url:  jdbc:sqlserver://0.0.0.0:1433;databaseName=master
+      #jdbcUrl:  jdbc:sqlserver://0.0.0.0:1433;databaseName=master
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      username: sa
+      password: P@ssw0rd
+  jpa:
+#    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
